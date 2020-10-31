@@ -26,3 +26,6 @@ public class MainActivity extends AppCompatActivity {
         txtBox.setText("Hello " + edtTxtName.getText().toString());
     }
 }
+
+// https://www.youtube.com/watch?v=fis26HvvDII
+// pausado em 1:00:06
