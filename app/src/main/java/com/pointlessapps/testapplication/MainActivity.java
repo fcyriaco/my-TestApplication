@@ -12,18 +12,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // relaciona com activity_main.xml
         setContentView(R.layout.activity_main);
     }
 
-    // funcao para tratar o click no botao
-    public void onButtonClick(View view) {
-        // cria o objeto txtBox relacionado com o campo txtMessage da activity_main.txt
-        TextView txtBox = findViewById(R.id.txtMessage);
-        // cria o objeto edtTxtName para entrada de texto.
-        EditText edtTxtName = findViewById(R.id.editTxtName);
-        // modifica o texto na caixa.
-        txtBox.setText("Hello " + edtTxtName.getText().toString());
+    public void onRegisterBtnClick(View view) {
+        TextView txtFirstName = findViewById(R.id.txtFirstName);
+        TextView txtLastName = findViewById(R.id.txtLastName);
+        TextView txtEmail = findViewById(R.id.txtEmail);
+
+        EditText edtTxtFirstName = findViewById(R.id.edtTxtFirstName);
+        EditText edtTxtLastName = findViewById(R.id.edtTxtLastName);
+        EditText edtTxtEmail = findViewById(R.id.edtTxtEmail);
+
+        txtFirstName.setText("First Name: " + edtTxtFirstName.getText().toString());
+        txtLastName.setText("Last Name: " + edtTxtLastName.getText().toString());
+        txtEmail.setText("Email: " + edtTxtEmail.getText().toString());
+
     }
 }
 
