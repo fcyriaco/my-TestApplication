@@ -27,9 +27,5 @@ public class MainActivity extends AppCompatActivity {
         txtFirstName.setText("First Name: " + edtTxtFirstName.getText().toString());
         txtLastName.setText("Last Name: " + edtTxtLastName.getText().toString());
         txtEmail.setText("Email: " + edtTxtEmail.getText().toString());
-
     }
 }
-
-// https://www.youtube.com/watch?v=fis26HvvDII
-// pausado em 1:00:06
