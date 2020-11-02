@@ -47,8 +47,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="casual"
         android:onClick="onRegisterBtnClick"
         android:text="Register"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/edtTxtEmail"
         app:layout_constraintStart_toStartOf="@+id/edtTxtEmail"
         app:layout_constraintTop_toBottomOf="@+id/edtTxtEmail" />
