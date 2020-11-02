@@ -9,10 +9,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private TextView txtFirstName;
+    private TextView txtLastName;
+    private TextView txtEmail;
+    private EditText edtTxtFirstName;
+    private EditText edtTxtLastName;
+    private EditText edtTxtEmail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,24 +27,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button btnRegister = findViewById(R.id.btnRegister);
         btnRegister.setOnClickListener(this);
+        txtFirstName = findViewById(R.id.txtFirstName);
+        txtLastName = findViewById(R.id.txtLastName);
+        txtEmail = findViewById(R.id.txtEmail);
+        edtTxtFirstName = findViewById(R.id.edtTxtFirstName);
+        edtTxtLastName = findViewById(R.id.edtTxtLastName);
+        edtTxtEmail = findViewById(R.id.edtTxtEmail);
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.btnRegister:
-                TextView txtFirstName = findViewById(R.id.txtFirstName);
-                TextView txtLastName = findViewById(R.id.txtLastName);
-                TextView txtEmail = findViewById(R.id.txtEmail);
-
-                EditText edtTxtFirstName = findViewById(R.id.edtTxtFirstName);
-                EditText edtTxtLastName = findViewById(R.id.edtTxtLastName);
-                EditText edtTxtEmail = findViewById(R.id.edtTxtEmail);
-
                 txtFirstName.setText("First Name: " + edtTxtFirstName.getText().toString());
                 txtLastName.setText("Last Name: " + edtTxtLastName.getText().toString());
                 txtEmail.setText("Email: " + edtTxtEmail.getText().toString());
-                Toast.makeText(this, "Hey!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Registered!", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
