@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Test Application</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">email</string>
+    <string name="register">Register</string>
+    <string name="tVfirst_name">First name</string>
+    <string name="tVlast_name">Last Name</string>
+    <string name="tVemail">email</string>
+    <string name="allow_registry">Allow Registry</string>
+    <string name="upper_case">Upper case</string>
+    <string name="lower_case">Lower case</string>
 </resources>

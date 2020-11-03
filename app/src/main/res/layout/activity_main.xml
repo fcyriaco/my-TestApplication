@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="@string/first_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Last Name"
+        android:hint="@string/last_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/edtTxtFirstName"
         app:layout_constraintStart_toStartOf="@+id/edtTxtFirstName"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="email"
+        android:hint="@string/email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/edtTxtLastName"
         app:layout_constraintStart_toStartOf="@+id/edtTxtLastName"
@@ -49,8 +49,7 @@
         android:layout_marginTop="90dp"
         android:backgroundTint="@android:color/holo_orange_light"
         android:fontFamily="casual"
-        android:onClick="onRegisterBtnClick"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="@color/design_default_color_error"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/edtTxtEmail"
@@ -61,8 +60,8 @@
         android:id="@+id/txtFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:text="First name"
+        android:layout_marginTop="50dp"
+        android:text="@string/tVfirst_name"
         app:layout_constraintEnd_toEndOf="@+id/btnRegister"
         app:layout_constraintStart_toStartOf="@+id/btnRegister"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
@@ -72,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Last Name"
+        android:text="@string/tVlast_name"
         app:layout_constraintEnd_toEndOf="@+id/txtFirstName"
         app:layout_constraintStart_toStartOf="@+id/txtFirstName"
         app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
@@ -82,8 +81,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="email"
+        android:text="@string/tVemail"
         app:layout_constraintEnd_toEndOf="@+id/txtLastName"
         app:layout_constraintStart_toStartOf="@+id/txtLastName"
         app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
+
+    <CheckBox
+        android:id="@+id/chkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/allow_registry"
+        app:layout_constraintBottom_toTopOf="@+id/edtTxtFirstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail">
+
+        <RadioButton
+            android:id="@+id/rbUpperCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:checked="false"
+            android:text="@string/upper_case" />
+
+        <RadioButton
+            android:id="@+id/rbLowerCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/lower_case" />
+
+    </RadioGroup>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
